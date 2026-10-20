@@ -25,3 +25,9 @@ main { max-width: 1500px; padding: 40px; margin: auto; }
 @media(max-width: 1050px) { main { padding: 28px 24px; } .topbar { padding: 0 24px; } .table-heading { align-items: flex-start; flex-direction: column; } }
 @media(max-width: 899px) { .workspace { margin-left: 0; } .MuiDrawer-paper .sidebar { position: relative; min-height: 100dvh; } }
 @media(max-width: 599px) { main { padding: 26px 16px; } .topbar { padding: 0 12px; height: 64px; } .stats { grid-template-columns: 1fr; gap: 12px; } .stat-card.MuiPaper-root { padding: 16px 20px; } .page-title { align-items: flex-start; } .page-title > .MuiChip-root { display: none; } .table-heading { padding: 20px 24px; } .footer-note.MuiTypography-root { line-height: 2; } }
+
+/* Disabled controls still expose their historical click statistics on hover. */
+[data-analytics-button]:disabled,
+[data-analytics-button][aria-disabled="true"] {
+  pointer-events: auto !important;
+}
