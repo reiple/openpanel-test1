@@ -17,6 +17,20 @@ npm run dev
 프로덕션 빌드: `npm run build`
 빌드 미리보기: `npm run preview`
 
+## 실제 동작 화면
+
+`http://localhost:5173`에서 실행 중인 화면을 캡처했습니다. 버튼에 마우스를 올리면 OpenPanel에 저장된 전체 기간의 클릭 횟수가 표시됩니다. 아래 횟수는 2026-10-20 캡처 시점의 값이며 사용에 따라 달라집니다.
+
+**대시보드 — 활동 추가 버튼의 누적 클릭 10회**
+
+![대시보드의 활동 추가 버튼에 마우스를 올려 OpenPanel 누적 클릭 10회 팝업을 표시한 실제 화면](docs/screenshots/dashboard-click-count.png)
+
+**사용자 관리 — 사용자 추가 버튼의 누적 클릭 1회**
+
+![사용자 관리의 사용자 추가 버튼에 마우스를 올려 OpenPanel 누적 클릭 1회 팝업을 표시한 실제 화면](docs/screenshots/users-click-count.png)
+
+두 버튼은 동일한 `open_add_dialog` 이벤트 ID를 사용하지만 메뉴별로 별도 집계됩니다. 자세한 기준은 [버튼 위에서 누적 클릭 횟수 보기](#버튼-위에서-누적-클릭-횟수-보기)를 참고하세요.
+
 ## OpenPanel 통계 (Docker)
 
 OpenPanel Analytics **공개 2.x 이미지**를 사용합니다. 구성은 `infra/openpanel/compose.yaml`에 있습니다. 웹 호스팅 관리 도구인 동명의 OpenPanel과는 다른 제품입니다.
