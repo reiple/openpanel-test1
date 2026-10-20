@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body { margin: 0; color: #23314a; }
+.sidebar { position: fixed; inset: 0 auto 0 0; width: 238px; background: #17243b; color: white; display: flex; flex-direction: column; }
+.brand { display: flex; align-items: center; gap: 12px; padding: 31px 28px 44px; }
+.brand-mark { width: 39px; height: 41px; border-radius: 12px; display: grid; place-content: center; background: #6c7aee; font-size: 27px; font-weight: 800; position: relative; }
+.brand-mark span { position: absolute; font-size: 25px; right: 5px; bottom: -2px; color: #b9c2ff; }
+.sidebar .nav-label { color: #7788a6; font-size: 11px; padding-left: 30px; margin-bottom: 12px; }
+.active-dot { height: 6px; width: 6px; border-radius: 50%; background: #a2adff; }
+.sidebar-bottom { display: flex; align-items: center; gap: 9px; margin: auto 24px 25px; padding: 20px 0 0; color: #93a2b9; border-top: 1px solid #2b3951; }
+.demo-indicator { width: 6px; height: 6px; background: #75bdad; border-radius: 50%; }
+.workspace { margin-left: 238px; min-height: 100vh; }
+.topbar { height: 76px; background: white; border-bottom: 1px solid #e8ecf3; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
+.breadcrumb { margin: 0 14px; color: #c1c8d5; }
+.topbar strong { color: #38465b; font-weight: 500; }
+main { max-width: 1500px; padding: 40px; margin: auto; }
+.page-title { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 30px; }
+.page-title .eyebrow { font-size: 10px; color: #8894ab; letter-spacing: 1.7px; font-weight: 700; margin-bottom: 8px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 30px; }
+.stat-card.MuiPaper-root { padding: 22px 24px 17px; border-color: #e5eaf2; border-radius: 14px; }
+.table-panel.MuiPaper-root { border-color: #e5eaf2; border-radius: 14px; overflow: hidden; }
+.table-heading { padding: 26px 24px 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.count { display: inline-block; background: #edf0fd; color: #6475cf; font-size: 11px; padding: 2px 8px; margin-left: 5px; border-radius: 5px; vertical-align: middle; }
+.footer-note.MuiTypography-root { text-align: center; font-size: 11px; margin-top: 27px; color: #98a2b3; }
+.footer-note span { margin: 0 7px; }
+@media(max-width: 1050px) { main { padding: 28px 24px; } .topbar { padding: 0 24px; } .table-heading { align-items: flex-start; flex-direction: column; } }
+@media(max-width: 899px) { .workspace { margin-left: 0; } .MuiDrawer-paper .sidebar { position: relative; min-height: 100dvh; } }
+@media(max-width: 599px) { main { padding: 26px 16px; } .topbar { padding: 0 12px; height: 64px; } .stats { grid-template-columns: 1fr; gap: 12px; } .stat-card.MuiPaper-root { padding: 16px 20px; } .page-title { align-items: flex-start; } .page-title > .MuiChip-root { display: none; } .table-heading { padding: 20px 24px; } .footer-note.MuiTypography-root { line-height: 2; } }
